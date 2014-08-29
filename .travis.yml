@@ -1,0 +1,32 @@
+language: php
+php:
+- 5.5
+services:
+- mysql
+source_key: "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBdW9Ba3BwdUgwMUVLZ3I2eUFZSnpZVUlRNUJMaDFMMUk4MjNmV21XMVJpRWgraVFzClYwNUc3djB0ZlAwU3VraEJMMGljU3pTWm4vUjlmcG5IaDg3T1F0WWxsRzRaWWFUMTlIWU04K2NRa3N0QWFTMDcKeEw5cERlc3JPdzk4MlNpR3JpKzYyMTd4dUZCem5BQ2NZOVByeVVNUE5wN2VkTEJMVEZ1RWt1K3dSYnJLMkQzOApRUlVwQ0FFckdraFZseWFsZno5Uko0RHJSeHlHN3dLa0dyTjRVK2tZellPUm5sQ3ZVcXV1YmVsUDhIdS84RVlxCkhkK0RvZUl2dUdHS3J0M05mK1V5b09mR2JjK3MzY2w0Y081RVF1QUdDMzk0R0l3azl4d1IycHRhazZqRnhvMmYKMzU3RXc3cVhCdHFqWXQycnc1N0JoM2VUVFN0ZnZOMzB3T1B3c3dJREFRQUJBb0lCQURxL1NzeEFpZFNDM3JDNApxUkhZcWNlbEsvVHNEYjhac1BVZFV4SUNuOHRyZkd4eklKU1B6OEJRZUJlN0VEOGxxNExkZUg0b0g0eEhVNUNoCm1EeXJaRVdoZDB6K01YaVVvZlZUaWxqNkhEcGhVL1ROanRvM0FUeWxLNFQ3Si9TdjAxempKQlVlSHo1VCtWYlcKeW15WHdOb3hDWVhISFlQY1ZKdkU2RW53dnJIM3p6UVcxQWZnQWNyTWNCcHFBNGlEZERhMURxbUVTdzFGVTRrSgo5Vy9DaTRMYVloYWZVK0F5YUlDRXpoaWt6NWxoN1hwTnMrSFFRRW1HRHZKcnU2MUhNN3U4VnJpQ0MwUEk3MURiCkZMZm9EckhpQTVraU1GVmc3emw0Q24ydGdYL0ZUTWJROWpiU3BPVFFZSDUxVnlFa1hGSElJZEh2bGVmbm1QQzcKSTJYeE44RUNnWUVBNTBtTmpZaDV0TnhXMFRMSnI5d0VzVUgreUF2QXVXRklJNWc5dTZLRGFXOHVTMmRoRjh1WApLNTVzbnFHZTNKTXpYZTQrT1BraWpVdDIvS3RvTzhoZXlPdlJTT3JSeE95K05jOG9tbjdCQ1NtcHp0d3dFQVJICndaemsxTFZjN2g2bVI2dW5iU1E2VVBxZlZBeFp6QWQ0WGF6MWxMUUQ0L2M4a1FGeGRndjJNbGtDZ1lFQXptMkgKZ2pzcFRBNkZYSExBeXhtamRUcTA0d0dmZitkUUl4THhrY3JHejJKekEvTVdsdjdYdzNUOGo4RlhsNlY4U0JBVQpLckJSbUlSRnNhR004eDluaXhDVWMvR1pqaWV1ZUJPYnliaDZvT2l4QTRKZmFQbzF2MjliRFhTMUlpTGg1Wk0yCnlqaTZYaXBjbnpSZDgyYkMxbmc1VTJRczUxZnlxb1NjbTZsUVllc0NnWUJMekZrdHR6cGJ3WkphUVJERUo1RUsKSHB6SEpzTGtmak5NSndxa1FhQmJuMnBHbi95NzlhYjNUcFkrYnExSGtKNVcvRXM4RkxuMElIVkFYVlJ0c3o4TgpEZXVxdi9vN1ZYTUk0M2xsR0lGZTVWNlhRcVlsdWFGaW5HNktIMTN6VSt3ZXRPekw0Z0dTcEhBdTlWVkFmbm8rCkNQNzYydndqYTlWWG1HZDh6bkxERVFLQmdRQ3VPai9QS1VQWHo4RzduNWNkVk14am0yTWszaS9TOGxidTQ0UkUKZXhPRjRpQVZTMHpic01oSFRpd0U0VGllNDZ1YjN3WkdhWDdVN1g4dFI1OEJiSlltQjU1a3Badm5JWkxlQWg3UgpDUVZuWGo1WktlYUJZZjJQVDl0WDVoTWpkckdXNU1PdnRtV0dLTmI0QUdqemtONE55bmNIN1ZzQS8zZnZkL0grClo4OVNkUUtCZ0FYakVMRnJjMklkZ0ZJcVpjWXJ1NW1rSUpiWUExNUZZMjlHbDRibytNMzFYdjBzeENjeFppTGoKNGtGQWlPRldja3pkc1pyOXRDVzdoMWpXZDBRS3RkczBNWnYrRi9nR0JSSXplTjM3NndZbjhteDJ6YVd3cmtsZgpYQWpUR0RkSTNvcGJqY1ZkSG81YnlIQWNSTnR3WHJCbGNkYzhUS3ZlWm5WNFVaQWZXOWVNCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg=="
+before_script:
+- sudo apt-get update > /dev/null
+- sudo apt-get install -y -q --force-yes apache2 libapache2-mod-fastcgi
+- sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv
+  version-name)/etc/php-fpm.conf
+- sudo a2enmod rewrite actions fastcgi alias
+- echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+- ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
+- sudo cp -f cnf/travis.conf /etc/apache2/sites-available/default
+- sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)/www?g" --in-place /etc/apache2/sites-available/default
+- sudo phantomjs --webdriver=8643 &>/dev/null &
+- sudo service apache2 restart
+- echo "127.0.0.1 behat-demo.dev" | sudo tee -a /etc/hosts
+- mysql -e \"create database $(php -r "echo trim(parse_url('$DRUPAL_DB_URL', PHP_URL_PATH),'/');")\"
+- composer self-update
+- composer install --dev --prefer-dist
+- build/install.sh
+- build/drush-build.sh
+- sudo chown -R travis:www-data www
+script: bin/behat --tags "~@skip" -f pretty,html --out ,out.html
+cache:
+  apt: true
+env:
+  global:
+    - DROPSHIP_SEEDS=behat_demo
+    - DRUPAL_DB_URL=mysql://travis@localhost/drupal

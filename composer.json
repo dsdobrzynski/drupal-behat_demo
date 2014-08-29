@@ -1,0 +1,40 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://static.drupal-packagist.org/v0.2.0"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/promet/kw_manifests"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/promet/drop_ship"
+    }
+  ],
+  "name": "drupal/behat_demo",
+  "type": "drupal-module",
+  "require": {
+    "drupal/drupal": "~7.30",
+    "drush/drush": "~6.4",
+    "winmillwill/settings_compile": "~2.1.0",
+    "drupal/registry_rebuild": "~7.1",
+    "drupal/kw_manifests": "~1.0.1",
+    "drupal/drop_ship": "~1.0.2",
+    "drupal/tangler": "~0.1"
+  },
+  "require-dev": {
+    "behat/behat": "~2.5.0@stable",
+    "behat/mink": "~1.5.0@stable",
+    "behat/mink-selenium2-driver": "*",
+    "behat/mink-selenium2-driver": "*",
+    "drupal/drupal-extension": "~1.0.0@stable",
+    "phpspec/phpspec": "*"
+  },
+  "minimum-stability": "alpha",
+  "scripts": {
+    "post-install-cmd": ["vendor/bin/drupal_tangle"],
+    "post-update-cmd": ["vendor/bin/drupal_tangle"]
+  }
+}
