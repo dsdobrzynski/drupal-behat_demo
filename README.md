@@ -8,10 +8,9 @@ requirements
 
 Legacy Notes:
 
-	#1.  	You no longer need any particular vagrant plugins. The box is
-				already provisioned, so there's no need for a chef run.
+	#1.  You no longer need any particular vagrant plugins. The box is already provisioned, so there's no need for a chef run.
 				
-	#2.  	You no longer run this script with an enviroment instance option.
+	#2.  You no longer run this script with an enviroment instance option.
 
 
 Building
