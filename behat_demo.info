@@ -1,3 +1,15 @@
 name = Behat Demo
 description = Demonstrates Behat
 core = 7.x
+package = Behat Demo
+dependencies[] = admin_menu
+dependencies[] = block
+dependencies[] = ctools
+dependencies[] = date
+dependencies[] = devel
+dependencies[] = module_filter
+dependencies[] = rules
+dependencies[] = strongarm
+dependencies[] = views
+dependencies[] = wysiwyg_filtered_profile
+dependencies[] = wysiwyg_full_profile

@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * Implements hook_kw_manifests_info().
+ *
+ */
+function behat_demo_kw_manifests_info() {
+  return array(
+    'manage_file_path' => array(
+      'callback' => 'behat_demo_file_path',
+      'callback arguments' => array(
+        getenv('PRIVATE_DIR') ?: 'sites/default/files/private',
+        getenv('TMP_DIR') ?: '/tmp',
+      ),
+    ),
+    'manage_preproccess' => array(
+      'callback' => 'behat_demo_css_js',
+      'callback arguments' => array(
+        getenv('PREPROCESS_CSS') ?: 0,
+        getenv('PREPROCESS_JS') ?: 0,
+      ),
+    ),
+    'manage_cache' => array(
+      'callback' => 'behat_demo_manage_cache',
+      'callback arguments' => array(
+        getenv('ANONYMOUS_CACHE') ?: '1',
+        getenv('BLOCK_CACHE') ?: '1',
+        getenv('PAGE_COMPRESS') ?: '1',
+      ),
+    ),
+  );
+}
+
+function behat_demo_file_path() {
+  // Manage default private & temp file paths
+  list($private_files, $temp_files) = func_get_args();
+  variable_set('file_private_path', $private_files);
+  variable_set('file_temporary_path', $temp_files);
+}
+
+function behat_demo_css_js() {
+  // Manages CSS & JS preprocessing as configured in environment file  .env
+  list($preprocess_css, $preprocess_js) = func_get_args();
+  variable_set('preprocess_css', intval($preprocess_css));
+  variable_set('preprocess_js', intval($preprocess_js));
+}
+
+function behat_demo_manage_cache() {
+  // Manages cache options as configured in environment file  .env
+  list($cache_anon, $block_cache, $page_compress ) = func_get_args();
+  variable_set('cache', $cache_anon);
+  variable_set('page_compression', $page_compress);
+
+  if (module_exists('block')) {
+    variable_set('block_cache', $block_cache);
+  }
+}

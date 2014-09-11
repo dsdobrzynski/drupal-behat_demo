@@ -15,10 +15,25 @@ Legacy Notes:
 
 Building
 --------
-* First step after cloning the repo should be to run composer install.
+
+```bash
+sudo cat cnf/hosts >> /etc/hosts 
+composer install
+```
+
 
 * Run `vagrant up` to build the environment.
 * ssh in with `vagrant ssh`
 * Navigate to `/var/www/sites/PROJECT`.
 * cp `env.json` from `/var/drupal/default/` to next to your `settings.php`.
 * From inside your drupal root, run `../build/drush-build.sh local` and party.
+
+Use
+---
+
+The build script `drush-build.sh` takes an optional argument which determines whether to slaughter an existing site:
+
+* slaughter
+
+That's it.
+
