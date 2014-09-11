@@ -1,0 +1,17 @@
+name = Behat Feature
+description = Demonstrates Behat development process
+core = 7.x
+package = Behat Demo
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = node
+dependencies[] = strongarm
+dependencies[] = text
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_instance][] = node-behat_demo-body
+features[node][] = behat_demo
+features[variable][] = node_options_behat_demo
+features[variable][] = node_preview_behat_demo
+features[variable][] = node_submitted_behat_demo
