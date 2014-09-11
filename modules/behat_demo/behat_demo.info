@@ -3,6 +3,7 @@ description = Behat demo dependencies
 core = 7.x
 package = Behat Demo
 dependencies[] = admin_menu
+dependencies[] = behat_feature
 dependencies[] = block
 dependencies[] = ctools
 dependencies[] = date
