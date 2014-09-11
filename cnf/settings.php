@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require DRUPAL_ROOT . '/sites/default/vendor/autoload.php';
 
 $databases['default']['default'] = array(
   'username' => 'default',
