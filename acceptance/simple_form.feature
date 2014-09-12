@@ -12,5 +12,5 @@ Feature: simple_form
   Scenario: Navigate to content admin and add behat-demo content
   		 When I visit "node/add/behat-demo"
   		   And I press the "Save" button
-  		 Then I should see the text "My Text Field field is required."
+  		 Then I should see the text "My Required Text field is required."
   		 
