@@ -4,15 +4,15 @@ set -e
 
 if [ -z "$1" ];
 then
-  echo "No new install will occur without the \"slaughter\" option. See README for NEW details.";
+  echo "No new install will occur without the \"install\" option. See README for NEW details.";
 fi
 
 #option
-slaughter=$1
+install=$1
 
 #paths
 build_path="$( cd "$( dirname "$0" )" && pwd )"
-slaughter_path="$( cd "$( dirname "$0" )/slaughter" && pwd )"
+install_path="$( cd "$( dirname "$0" )/install" && pwd )"
 top_path="$( cd "../" && pwd )"
 env_path="$top_path/.env"
 
@@ -33,17 +33,17 @@ then
   source "$top_path/.env"
 fi
 
-if [ -n "$slaughter" ] && [ "$slaughter" == "slaughter" ]
+if [ -n "$install" ] && [ "$install" == "install" ]
 then
-  echo "Slaughter option is $slaughter"
-  echo "Building with slaughter option"
+  echo "Install option is $install"
+  echo "Building with install option"
   source "$env_path"
   echo "Seed is $DROPSHIP_SEEDS"
   echo "Preprocess CSS is $PREPROCESS_CSS"
   echo "Preprocess JS is $PREPROCESS_JS"
-  source "$slaughter_path/slaughter.sh"
+  source "$install_path/install.sh"
 else
-  echo no slaughter in progress \(aren\'t you glad?\)
+  echo no install in progress \(aren\'t you glad?\)
 fi
 
 $drush kw-manifests
