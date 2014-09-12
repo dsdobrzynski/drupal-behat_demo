@@ -2,5 +2,4 @@ vendor
 www
 .env
 .vagrant
-cnf/settings.php
 files/*
