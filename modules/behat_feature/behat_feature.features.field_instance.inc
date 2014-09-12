@@ -34,7 +34,7 @@ function behat_feature_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_my_text_field',
     'label' => 'My Required Text',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
