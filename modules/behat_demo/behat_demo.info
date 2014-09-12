@@ -10,6 +10,7 @@ dependencies[] = date
 dependencies[] = devel
 dependencies[] = diff
 dependencies[] = features
+dependencies[] = field_ui
 dependencies[] = image
 dependencies[] = module_filter
 dependencies[] = rules
