@@ -16,14 +16,15 @@ Legacy Notes:
 Building
 --------
 
+* Run `vagrant up` to build the environment.
+* ssh in with `vagrant ssh`
 ```bash
 sudo cat cnf/hosts >> /etc/hosts 
 composer install
 ```
 
 
-* Run `vagrant up` to build the environment.
-* ssh in with `vagrant ssh`
+
 * Navigate to `/var/www/sites/PROJECT`.
 * cp `env.json` from `/var/drupal/default/` to next to your `settings.php`.
 * From inside your drupal root, run `../build/drush-build.sh local` and party.
@@ -35,5 +36,19 @@ The build script `drush-build.sh` takes an optional argument which determines wh
 
 * install
 
-That's it.
+To Demo
+-------
+
+Checkout demo_working branch
+run behat
+
+Should show successful test
+
+
+Checkout demo_failing branch
+run behat
+
+Should show failed test
+
+
 
