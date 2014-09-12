@@ -31,9 +31,9 @@ composer install
 Use
 ---
 
-The build script `drush-build.sh` takes an optional argument which determines whether to slaughter an existing site:
+The build script `drush-build.sh` takes an optional argument which determines whether to install an existing site:
 
-* slaughter
+* install
 
 That's it.
 
