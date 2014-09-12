@@ -4,27 +4,21 @@ set -e
 
 if [ -z "$1" ];
 then
-  echo "No new install will occur without the \"slaughter\" option. See README for NEW details.";
+  echo "No new install will occur without the \"install\" option. See README for NEW details.";
 fi
 
 #option
-slaughter=$1
+install=$1
 
 #paths
 build_path="$( cd "$( dirname "$0" )" && pwd )"
-slaughter_path="$( cd "$( dirname "$0" )/slaughter" && pwd )"
+install_path="$( cd "$( dirname "$0" )/install" && pwd )"
 top_path="$( cd "../" && pwd )"
 env_path="$top_path/.env"
 
 #drush flags
 drush_flags="-r $top_path/www"
 drush="drush $drush_flags"
-
-#Sanity Checks
-echo Build path is $build_path
-echo Top path is $top_path
-echo Environment config path is $env_path
-echo $top_path/www/sites/default/files
 
 # Load environment config 
 if [ -e "$top_path/.env" ]
@@ -33,27 +27,16 @@ then
   source "$top_path/.env"
 fi
 
-if [ -n "$slaughter" ] && [ "$slaughter" == "slaughter" ]
+if [ -n "$install" ] && [ "$install" == "install" ]
 then
-  echo "Slaughter option is $slaughter"
-  echo "Building with slaughter option"
-  source "$env_path"
+  echo "Install option is $install"
+  echo "Building with install option"
   echo "Seed is $DROPSHIP_SEEDS"
-  echo "Preprocess CSS is $PREPROCESS_CSS"
-  echo "Preprocess JS is $PREPROCESS_JS"
-  source "$slaughter_path/slaughter.sh"
+  source "$install_path/install.sh"
 else
-  echo no slaughter in progress \(aren\'t you glad?\)
+  echo no install in progress
 fi
 
 $drush kw-manifests
 echo "Clearing caches.";
-$drush cc all -y
-echo "Reverting all features.";
-$drush fra -y
-echo "Running any updates.";
-$drush updb -y
-#echo "Setting the theme default.";
-#$drush scr $build_path/scripts/default_set_theme.php
-echo "Clearing caches one last time.";
 $drush cc all -y
