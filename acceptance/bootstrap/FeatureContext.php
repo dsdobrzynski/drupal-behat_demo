@@ -31,7 +31,6 @@ class FeatureContext extends DrupalContext
      */
     public function __construct(array $parameters)
     {
-        $this->useContext('commerce', new DrupalCommerceContext());
     }
 
     public function beforeScenario($event)
@@ -91,7 +90,6 @@ class FeatureContext extends DrupalContext
         parent::afterScenario($event);
 
         $this->drupalSession = FALSE;
-        $this->getSubcontext('commerce')->afterScenario($event);
     }
 
     /** @AfterScenario @menu */
